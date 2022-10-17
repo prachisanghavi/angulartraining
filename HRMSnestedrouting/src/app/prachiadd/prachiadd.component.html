@@ -1,0 +1,54 @@
+<html>
+<body>
+  <a [routerLink]="['/']" class="btn btn-primary">Back</a>
+  <div class="row">
+    <div class=" col-md-6 offset-md-3 offset-md-3">
+<h2>Employee Form</h2>
+
+<form [formGroup]="checkForm" (ngSubmit)="onSubmit()"  novalidat>
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" formControlName="name" minlength="3"><br>
+  <span *ngIf="formSubmitted && checkForm.get('name').hasError('required')" >
+    * name is required
+ </span>
+ <span *ngIf="formSubmitted && checkForm.get('name').hasError('minlength')" >
+  * name is must be lengh is 3
+</span>
+ <span *ngIf="formSubmitted && checkForm.get('name').hasError('pattern')" >
+  * name is not valid 
+</span><br>
+  <label for="email">Email :</label><br>
+  <input type="text" id="email" formControlName="email" ><br>
+  <span *ngIf="formSubmitted && checkForm.get('email').hasError('required')" >
+   * email is required
+</span>
+
+<span *ngIf="formSubmitted && checkForm.get('email').hasError('email')" >
+  * email is not valid
+</span><br>
+  <label for="mobile">Mobile No:</label><br>
+  <input type="text" id="mobile" formControlName="mobile" ><br>
+  <span *ngIf="formSubmitted && checkForm.get('mobile').hasError('required')" >
+    * mobile is required
+ </span>
+ <span *ngIf="formSubmitted && checkForm.get('mobile').hasError('pattern')" >
+    * Enter valid mobile number
+ </span><br>
+ <label for="Address">Address:</label><br>
+ <input type="text" id="Address" formControlName="address" ><br>
+ <span *ngIf="formSubmitted && checkForm.get('address').hasError('required')" >
+   * gender is required
+</span><br>
+  <label for="gender">Gender:</label><br>
+  <input type="text" id="gender" formControlName="gender" ><br>
+  <span *ngIf="formSubmitted && checkForm.get('gender').hasError('required')" >
+    * gender is required
+ </span><br>
+  <button class="button" type="submit" class="btn btn-primary" >Add</button>
+</form> 
+
+</div></div>
+
+
+</body>
+</html>
