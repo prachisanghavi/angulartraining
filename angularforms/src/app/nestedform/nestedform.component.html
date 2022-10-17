@@ -1,0 +1,30 @@
+
+
+<form [formGroup]="AddForm"   >
+    <input type="text" id="name" placeholder="name"formControlName="name" ><br>
+    <div formGroupName="address">
+        <input type="text" placeholder="address" formControlName="addre"><br>
+        <input type="text" placeholder="state" formControlName="state">
+    </div>
+    <div formArrayName="countrys">
+      <div *ngFor="let countryy of countrys.controls">
+        <div formGroupName="countryy">
+            <input type="text"placeholder="country" formControlName="countryName">
+        </div>
+    </div>
+       
+      </div>
+      <button (click)="addcountrys()"> Add country</button>
+    
+      <div formArrayName="cities">
+        <div *ngFor="let city of cities.controls">
+          <div formGroupName="city">
+            <input type="text" placeholder="city" formControlName="cityName">
+          </div>
+        </div>
+      </div>
+      <button (click)="addCitites()"> Add cities</button>
+     
+    <button class="button" type="submit" class="btn btn-primary" (click)="onSubmit(AddForm.value)">Submit</button>
+</form> 
+
