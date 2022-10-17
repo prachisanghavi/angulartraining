@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PrachidirectivesComponent } from './prachidirectives/prachidirectives.component';
 
 const routes: Routes = [
+  { path: 'directive', component: PrachidirectivesComponent },
   {
     path: 'show',
     loadChildren: () => import('./nestedform/nested.module').then(m => m.NestedformModule)

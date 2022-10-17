@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { environment } from '../environments/environment';
+import { PrachidirectivesComponent } from './prachidirectives/prachidirectives.component';
 //import { NestedformComponent } from './nestedform/nestedform.component';
 //import { AddingComponent } from './adding/adding.component';
 //import { ShowComponent } from './show/show/show.component';
@@ -13,6 +14,7 @@ import { environment } from '../environments/environment';
 @NgModule({
   declarations: [
     AppComponent,
+    PrachidirectivesComponent,
    
     
     
