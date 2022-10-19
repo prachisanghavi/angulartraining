@@ -5,6 +5,8 @@ import { AppComponent } from './app.component';
 import { PrachiloginComponent } from './components/prachilogin/prachilogin.component';
 import { PrachiforgotPasswordComponent } from './components/prachiforgot-password/prachiforgot-password.component';
 import { PrachinotFoundComponent } from './components/prachinot-found/prachinot-found.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { PrachinotFoundComponent } from './components/prachinot-found/prachinot-
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
